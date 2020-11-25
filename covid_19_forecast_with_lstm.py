@@ -228,13 +228,21 @@ print(model.summary())
 #     verbose=0,
 # )
 
-epochs = 1#250
+epochs = 5#250
 start_time = time.time()
-history = model.fit(study_data, correct_data, batch_size=1,shuffle=True, epochs=epochs, validation_split=0.1, verbose=0, callbacks=[])#lr_decay,
+history = model.fit(study_data,
+                    correct_data,
+                    batch_size=1,
+                    shuffle=True,
+                    epochs=epochs,
+                    validation_split=0.1,
+                    verbose=0,
+                    callbacks=[]# lr_decay,
+                    )
 print("学習時間:",time.time() - start_time)
 
-# model.save('covid19_lstm_model.h5')
-# files.download('covid19_lstm_model.h5')
+path = "lstm/model/lstm_"+str(n_hidden)+"_"+str(drop_out)+".h5"
+model.save(path)
 
 # === 学習推移の可視化 ===
 train_loss = history.history['loss']
