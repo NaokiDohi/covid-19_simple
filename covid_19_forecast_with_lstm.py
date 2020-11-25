@@ -179,9 +179,10 @@ study_data, correct_data  = sequence_creator(train_normalized, window)
 
 # set parameters
 n_in_out = 1
-n_hidden = args[1]#2の乗数
-drop_out = args[2]
+n_hidden = int(args[1])# 2の乗数
+drop_out = float(args[2])
 print("model_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
+
 # def rmse(y_true, y_pred):
 #         return K.sqrt(K.mean(K.square(y_pred - y_true), axis=-1))
 
@@ -192,11 +193,11 @@ tf.random.set_seed(0)
 # define model
 model = Sequential()
 model.add(LSTM(n_hidden,
-                 batch_input_shape=(None,window, n_in_out),
-                 activation='relu',
-                 kernel_initializer='he_normal',
-                 # kernel_regularizer=regularizers.l1(0.01),
-                 ))
+                batch_input_shape=(None, window, n_in_out),
+                activation='relu',
+                kernel_initializer='he_normal',
+                # kernel_regularizer=regularizers.l1(0.01),
+                ))
 model.add(Dropout(drop_out))
 model.add(Dense(n_in_out))
 model.add(Activation("linear"))
