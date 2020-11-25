@@ -23,7 +23,7 @@ from pandas.plotting import register_matplotlib_converters
 import matplotlib.pyplot as plt
 # %matplotlib inline
 import seaborn as sns
-# sns.set()
+sns.set()
 
 import statsmodels.api as sm # version 0.8.0以上
 from sklearn.preprocessing import  MinMaxScaler
