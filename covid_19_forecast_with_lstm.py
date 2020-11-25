@@ -23,7 +23,7 @@ from pandas.plotting import register_matplotlib_converters
 import matplotlib.pyplot as plt
 # %matplotlib inline
 import seaborn as sns
-sns.set()
+# sns.set()
 
 import statsmodels.api as sm # version 0.8.0以上
 from sklearn.preprocessing import  MinMaxScaler
@@ -34,10 +34,10 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation,Dropout,LSTM
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, LearningRateScheduler
-from keras import regularizers
-from keras.models import load_model
-from keras import backend as K
-from keras.utils import plot_model
+from tensorflow.keras import regularizers
+from tensorflow.keras.models import load_model
+from tensorflow.keras import backend as K
+from tensorflow.keras.utils import plot_model
 from IPython.display import Image
 
 # get args
