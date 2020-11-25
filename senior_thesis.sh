@@ -1,5 +1,5 @@
 #!/bin/zsh
-mkdir -p mlp/log rnn/log lstm/log gru/log log mlp/model rnn/model lstm/model gru/model
+mkdir -p mlp/log rnn/log lstm/log gru/log mlp/model rnn/model lstm/model gru/model log
 
 for n in 16 32 64 128 256 512 1024
 do

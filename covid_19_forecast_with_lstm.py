@@ -174,14 +174,16 @@ def sequence_creator(input_data,window_size):#train_normalizedとwindow_sizeを�
 
     return re_data, re_target
 
-window = 7#学習時のウィンドウサイズ
+window = 7# 学習時のウィンドウサイズ
 study_data, correct_data  = sequence_creator(train_normalized, window)
 
 # set parameters
 n_in_out = 1
 n_hidden = int(args[1])# 2の乗数
 drop_out = float(args[2])
+
 print("model_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
+print("")
 
 # def rmse(y_true, y_pred):
 #         return K.sqrt(K.mean(K.square(y_pred - y_true), axis=-1))
@@ -204,6 +206,7 @@ model.add(Activation("linear"))
 optimizer = Adam(lr=0.001,  amsgrad=False)
 model.compile(loss="mse", optimizer=optimizer, metrics=["mae"])#,rmse])
 print(model.summary())
+print("")
 
 # with open('modelsummary.txt', 'w') as f:
 #     with redirect_stdout(f):
@@ -239,7 +242,9 @@ history = model.fit(study_data,
                     verbose=0,
                     callbacks=[]# lr_decay,
                     )
+
 print("学習時間:",time.time() - start_time)
+print("")
 
 path = "lstm/model/lstm_"+str(n_hidden)+"_"+str(drop_out)+".h5"
 model.save(path)
