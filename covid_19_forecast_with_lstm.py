@@ -41,11 +41,11 @@ from keras.utils import plot_model
 from IPython.display import Image
 
 # get args
-args = sys.argv
-    ARG_NUM = 2
-    if(len(sys.argv) < ARG_NUM):
-        print("Error")
-        sys.exit(0)
+# args = sys.argv
+ARG_NUM = 2
+if(len(sys.argv) < ARG_NUM):
+    print("Error")
+    sys.exit(0)
 
 # create df
 df = pd.read_csv('COVID-19/time_series_covid19_confirmed_global.csv')
