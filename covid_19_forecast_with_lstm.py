@@ -41,7 +41,7 @@ from keras.utils import plot_model
 from IPython.display import Image
 
 # get args
-# args = sys.argv
+args = sys.argv
 ARG_NUM = 2
 if(len(sys.argv) < ARG_NUM):
     print("Error")
