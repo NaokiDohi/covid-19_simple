@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 mkdir -p mlp/log rnn/log lstm/log gru/log mlp/model rnn/model lstm/model gru/model log
 
 for n in 16 32 64 128 256 512 1024
