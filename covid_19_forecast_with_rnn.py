@@ -182,7 +182,7 @@ n_in_out = 1
 n_hidden = int(args[1])# 2の乗数
 drop_out = float(args[2])
 
-print("model_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
+print("rnn_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
 print("")
 
 # def rmse(y_true, y_pred):

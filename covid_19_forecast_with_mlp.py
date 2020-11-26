@@ -31,7 +31,7 @@ from sklearn.metrics import mean_absolute_error,mean_squared_error,mean_squared_
 
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Activation,Dropout,
+from tensorflow.keras.layers import Dense, Activation, Dropout, Flatten
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.callbacks import EarlyStopping, ReduceLROnPlateau, LearningRateScheduler
 from tensorflow.keras import regularizers
@@ -325,7 +325,7 @@ x_train = np.arange('2020-01-23','2020-10-22', dtype='datetime64[D]').astype('da
 x_test = np.arange('2020-10-22', '2020-10-29', dtype='datetime64[D]').astype('datetime64[D]')
 
 # sns.set()
-path = " mlp/prediction/prediction_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "mlp/prediction/prediction_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.figure(figsize=(20,8))
 plt.title('New confirmed cases in Japan', y=-0.15)
 plt.xlabel("Date")
