@@ -182,7 +182,7 @@ n_in_out = 1
 n_hidden = int(args[1])# 2の乗数
 drop_out = float(args[2])
 
-print("model_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
+print("lstm_n:"+str(n_hidden)+"_dropout:"+str(drop_out))
 print("")
 
 # def rmse(y_true, y_pred):
@@ -253,7 +253,7 @@ model.save(path)
 train_loss = history.history['loss']
 val_loss = history.history['val_loss']
 
-path = "lstm/loss_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "lstm/loss/loss_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.plot(np.arange(len(train_loss)), train_loss, label="train_loss")
 plt.plot(np.arange(len(val_loss)), val_loss, label="val_loss")
 plt.title('Training and Validation loss', y=-0.25)
@@ -268,7 +268,7 @@ plt.close()
 train_mae = history.history['mae']
 val_mae = history.history['val_mae']
 
-path = "lstm/eval_loss_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "lstm/eval_loss/eval_loss_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.plot(np.arange(len(train_mae)), train_mae, label="train_mae")
 plt.plot(np.arange(len(val_mae)), val_mae, label="val_mae")
 plt.title('Training and Validation mae', y=-0.25)
@@ -324,7 +324,7 @@ x_train = np.arange('2020-01-23','2020-10-22', dtype='datetime64[D]').astype('da
 x_test = np.arange('2020-10-22', '2020-10-29', dtype='datetime64[D]').astype('datetime64[D]')
 
 # sns.set()
-path = "lstm/prediction_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "lstm/prediction/prediction_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.figure(figsize=(20,8))
 plt.title('New confirmed cases in Japan', y=-0.15)
 plt.xlabel("Date")
@@ -341,7 +341,7 @@ plt.savefig(path)
 plt.close()
 
 # sns.set()
-path = "lstm/prediction_detail_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "lstm/prediction_detail/prediction_detail_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.figure(figsize=(20,8))
 plt.title("New confirmed cases in Japan", y=-0.15)
 plt.xlabel("Date")

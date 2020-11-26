@@ -1,7 +1,10 @@
 #!/bin/bash
-mkdir -p mlp/log rnn/log lstm/log gru/log mlp/model rnn/model lstm/model gru/model log
-mkdir -p mlp/loss rnn/loss lstm/loss gru/loss mlp/eval_loss rnn/eval_loss lstm/eval_loss gru/eval_loss
-mkdir -p mlp/prediction rnn/prediction lstm/prediction gru/prediction mlp/detail rnn/detail lstm/detail gru/detail
+mkdir -p mlp/log rnn/log lstm/log gru/log mlp/model rnn/model lstm/model gru/model
+mkdir -p mlp/loss rnn/loss lstm/loss gru/loss 
+mkdir -p mlp/eval_loss rnn/eval_loss lstm/eval_loss gru/eval_loss
+mkdir -p mlp/prediction rnn/prediction lstm/prediction gru/prediction
+mkdir -p mlp/prediction_detail rnn/prediction_detail lstm/prediction_detail gru/prediction_detail
+mkdir -p log
 
 for n in 16 32 64 128 256 512 1024
 do

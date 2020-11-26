@@ -341,7 +341,7 @@ plt.savefig(path)
 plt.close()
 
 # sns.set()
-path = "rnn/detail/prediction_detail_"+str(n_hidden)+"_"+str(drop_out)+".png"
+path = "rnn/prediction_detail/prediction_detail_"+str(n_hidden)+"_"+str(drop_out)+".png"
 plt.figure(figsize=(20,8))
 plt.title("New confirmed cases in Japan", y=-0.15)
 plt.xlabel("Date")
