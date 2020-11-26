@@ -12,7 +12,7 @@ do
     do
         python3 covid_19_forecast_with_mlp.py $n $dropout > mlp/log/log_"$n"_"$dropout".txt
         python3 covid_19_forecast_with_rnn.py $n $dropout > rnn/log/log_"$n"_"$dropout".txt
-        # python3 covid_19_forecast_with_lstm.py $n $dropout > lstm/log/log_"$n"_"$dropout".txt
+        python3 covid_19_forecast_with_lstm.py $n $dropout > lstm/log/log_"$n"_"$dropout".txt
         python3 covid_19_forecast_with_gru.py $n $dropout > gru/log/log_"$n"_"$dropout".txt
     done
 done
