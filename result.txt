@@ -1,0 +1,4 @@
+latm run time
+real	716m26.583s
+user	1760m19.300s
+sys	237m46.993s
