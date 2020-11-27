@@ -16,5 +16,5 @@ do
         python3 covid_19_forecast_with_gru.py $n $dropout > gru/log/log_"$n"_"$dropout".txt
     done
 done
-$n $dropout
+# $n $dropout
 # log_` date "+%Y%m%d_%H%M%S"`.txt
